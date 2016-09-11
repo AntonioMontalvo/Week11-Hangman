@@ -10,6 +10,11 @@
   * Your `game.js` file will randomly select a word for the player.
   * `main.js` will contain the logic of your app. Running it in Terminal/Bash will start the game.
     * The app should end when a player guesses the correct word or runs out of guesses.
+  4. Key features:
+  	* Show the length of the word as _ _ _ _ _
+  	* Show Number of guesses remaining
+  	* Show letters already guessed
+  	* Keep track of wins ans loses
 
 ### Tips
 
@@ -20,11 +25,4 @@
   * Submit your app whether you finish or not; if you don't show us anything then we won't be able to help you with whatever programming issues you encountered this week.
 3. **Working game > pretty dud**. We're focusing on game mechanics, not just on the look and feel of your app.
 
--------
-### One More Thing
-If you have any questions about this project or about the material we covered, the instructor and your TAs are only a Slack message away.
 
-**Good Luck!**
-
-## Copyright
-Coding Boot Camp (C) 2016. All Rights Reserved.
