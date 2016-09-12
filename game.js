@@ -16,11 +16,16 @@ function WordToGuess(warehouse,randomCity){
 WordToGuess.prototype.printCity = function() {
 	var number = Math.floor(Math.random() * warehouse.length);
 	this.randomCity.unshift(this.warehouse[number]);
-  	console.log("City: " + this.randomCity);
+  	// console.log("City: " + this.randomCity);
 }
 
 var initialWord = new WordToGuess(warehouse, randomCity);
 initialWord.printCity();
+
+module.exports = initialWord;
+module.exports = randomCity;
+
+
 
 // function getCity(){
 // 	randomCity.unshift(warehouse[number]);
