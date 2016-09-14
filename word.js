@@ -5,10 +5,6 @@
 var randomCity = require('./game.js');
 var converted = require('./letter.js');
 
-// function Checker(arrayedWord, inputChoice){
-// 	this.arreyedWord = arrayedWord;
-// 	this.inputChoice =inputChoice;
-// }
 
 var Verify = function(arrayedWord, inputChoice) {
 	this.arreyedWord = arrayedWord;
@@ -19,10 +15,9 @@ var Verify = function(arrayedWord, inputChoice) {
 	  		converted.dashedWord[i] = inputChoice;
 	  	}
   	  }
-  	  console.log(converted.dashedWord);
-	  // console.log(inputChoice);
-  	  // converted.dashMe(converted.arrayedWord);
-	  // converted.displayDashedWord();
+  	converted.displayDashedWord();
+  	
+  
 	}
 }
 

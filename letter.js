@@ -35,9 +35,10 @@ var Conversion = function(randomCity){
 
 var converted = new Conversion(randomCity[0]);// Conversion Instance
 converted.arrayMe(randomCity);
-console.log(converted.arrayedWord);
+// console.log(converted.arrayedWord);
 converted.dashMe(converted.arrayedWord);
 // console.log(converted.dashedWord);
 converted.displayDashedWord();
+
 module.exports = converted;
 
