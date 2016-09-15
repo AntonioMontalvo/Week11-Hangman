@@ -32,16 +32,33 @@ var askQuestion = function (){
 	if(count < attempts){
 		if(count === 0){
 			console.log('YOUR JOB IS TO GUESS THE NAME OF THIS CITY!');
-		}
-	if( converted.arrayedWord.toString()  == converted.dashedWord.toString() ){
-			console.log('Hurrah! God job Columbus!');
-			count = 100;
 
 			fs.readFile("wins.txt", "utf8", function(error, data) {
 				if(error){
 					return console.log(error);
 				}
-				console.log('\nWins: ' + data);
+				console.log('You won the game: '+ data + ' times');
+			});
+
+			fs.readFile("losses.txt", "utf8", function(error, data) {
+				if(error){
+					return console.log(error);
+				}
+				console.log('You lost the game: '+ data + ' times');
+			});
+
+		}
+	if( converted.arrayedWord.toString()  == converted.dashedWord.toString() ){
+		
+
+			console.log('Hurrah! God job Columbus!');
+			console.log('Type node main.js to start again. Wins and losses will be displayed then!');
+	
+			fs.readFile("wins.txt", "utf8", function(error, data) {
+				if(error){
+					return console.log(error);
+				}
+				// console.log('\nWins: ' + data);
 
 
 				fs.writeFile("wins.txt", add(parseInt(data), 1), function(err) {
@@ -50,6 +67,7 @@ var askQuestion = function (){
 				    }
 				}); 
 			});
+		count = 100;
 		}	
 		
 		inquirer.prompt([{
@@ -65,14 +83,13 @@ var askQuestion = function (){
 				    askQuestion();
 		})
 	} else {
-		console.log('Game Over!');
 		console.log('The city was ' + converted.randomCity +'!');
-
+		
 		fs.readFile("losses.txt", "utf8", function(error, data) {
 				if(error){
 					return console.log(error);
 				}
-				console.log('\nlosses: ' + data);
+				// console.log('\nlosses: ' + data);
 
 
 				fs.writeFile("losses.txt", add(parseInt(data), 1), function(err) {
@@ -81,7 +98,6 @@ var askQuestion = function (){
 				    }
 				}); 
 			});
-		
 	}				
 }
 
