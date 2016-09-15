@@ -24,8 +24,9 @@ WordToGuess.prototype.selectCity = function() {
 
 var initialWord = new WordToGuess(warehouse, randomCity);
 initialWord.selectCity();
-
+module.exports = initialWord;
 module.exports = randomCity;
+
 
 
 
